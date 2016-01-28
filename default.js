@@ -7,3 +7,15 @@ function foo(msg="I am default"){
 }
 
 foo(); // I am default
+
+function foo2({ msg = "I am default" }){
+  return msg;
+}
+
+foo2({}); // I am default
+
+function foo3({ msg = "I am default" } = {}){
+  return msg;
+}
+
+foo3(); // I am default
